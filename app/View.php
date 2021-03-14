@@ -71,17 +71,21 @@ class View extends Database {
                         window.clearInterval(player);
                     }
                     photos = document.getElementsByTagName('img');
-                    photos[0].classList.add('active');
-                    currentIdx = 0;
-                    player = window.setInterval(() => {
-                        if (currentIdx == photos.length-1) {
-                            currentIdx = 0;
-                        } else {
-                            currentIdx++;
-                        }
-                        document.getElementsByClassName('active')[0].classList.remove('active');
-                        photos[currentIdx].classList.add('active');
-                    }, 30000);
+                    if (photos.length > 0) {
+                        photos[0].classList.add('active');
+                    }
+                    if (photos.length > 1) {
+                        currentIdx = 0;
+                        player = window.setInterval(() => {
+                            if (currentIdx == photos.length-1) {
+                                currentIdx = 0;
+                            } else {
+                                currentIdx++;
+                            }
+                            document.getElementsByClassName('active')[0].classList.remove('active');
+                            photos[currentIdx].classList.add('active');
+                        }, 30000);
+                    }
                 }
 
                 reset();
