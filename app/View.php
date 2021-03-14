@@ -64,7 +64,7 @@ class View extends Database {
                 let player = false;
                 function reset() {
                     let active = document.getElementsByClassName('active');
-                    if (active.length) {
+                    if (active.length > 0) {
                         active[0].classList.remove('active');
                     }
                     if (player) {
