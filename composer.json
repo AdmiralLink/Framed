@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Technicalpenguins\\Framed\\": "app/"
+        }
+    },
+    "require": {
+        "spatie/ray": "^1.21",
+        "pusher/pusher-php-server": "^5.0",
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
