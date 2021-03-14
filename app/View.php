@@ -81,7 +81,7 @@ class View extends Database {
                         }
                         document.getElementsByClassName('active')[0].classList.remove('active');
                         photos[currentIdx].classList.add('active');
-                    }, 5000);
+                    }, 30000);
                 }
 
                 reset();
