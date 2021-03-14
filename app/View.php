@@ -72,15 +72,15 @@ class View extends Database {
                     }
                     photos = document.getElementsByTagName('img');
                     if (photos.length > 0) {
-                        photos[0].classList.add('active');
+                        photos[photos.length-1].classList.add('active');
                     }
                     if (photos.length > 1) {
-                        currentIdx = 0;
+                        currentIdx = photos.length-1;
                         player = window.setInterval(() => {
-                            if (currentIdx == photos.length-1) {
-                                currentIdx = 0;
+                            if (currentIdx == 0) {
+                                currentIdx = photos.length-1;
                             } else {
-                                currentIdx++;
+                                currentIdx--;
                             }
                             document.getElementsByClassName('active')[0].classList.remove('active');
                             photos[currentIdx].classList.add('active');
